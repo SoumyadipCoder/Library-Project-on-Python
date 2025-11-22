@@ -1,0 +1,24 @@
+--: Library Management System :---
+
+1. Library Man
+2. Student
+
+
+a.  Login (Sign in) / Sign Up
+
+b. Dashboard( Student / Admin )
+||
+||=> Student Dashboard:-
+||      1. Book Request.
+||      2. Show Books
+||      3. Renew Book
+||      4. Return Book
+||
+||=> Admin Dashboard:-
+      1. Admin Show Books
+      2. New Book Donate
+      3. Requested Books
+     4. Accept New Requests
+     5. Accept Renew Requests
+     6. Accept Return Requests
+     7. Send Notification
