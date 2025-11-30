@@ -1,12 +1,17 @@
-def admin_signup(password,gmail):
-    from animations.heading import heading_box
+from animations.loading import loading
+from DB.db_functions import find_user_password, create_user
+from admin.Dashboard import admin_dashboard
 
-    heading_box("Children Library")
-   
-    name=input("Enter your full name:-")
-    regNo=int(input("Registration no:-"))
-    id=input("Id no:-")
-    degree=input("Enter your qualification:-")
-    post=input("Enter your assigned post:-")
-    bloodGr=input("Blood group:-")
-    print("Your details are subbmited succesfully.Please wait for the authority's approval.") 
+def admin_signup(password,gmail):
+    loading()
+    check_password = find_user_password(gmail, 'admin')
+    print("Password", check_password)
+    if check_password != None:
+        print("-"*15)
+        print("User already exist. Please login")
+        pass
+    else:
+        create_user(gmail, password, 'admin')
+        print("-"*15)
+        print("User account created successfully 🎉.")
+        admin_dashboard()

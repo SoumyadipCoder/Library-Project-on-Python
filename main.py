@@ -1,4 +1,4 @@
-from animations.heading import heading_box
+from animations.heading import heading_box, heading_highlight
 from animations.loading import pulse as loading
 from admin.auth_function import admin_signup
 from student.auth_function import student_signup
@@ -16,29 +16,30 @@ def login():
 
 
 def SignUp():
-    print("SignUp")
+    heading_highlight("SignUp")
     gmail=(input("Enter gmail:-")).strip()
     password=input("Enter a strong password containing atleast 6 character:-")
     print("~"*15)
     loading()
-    if (((len(password))>6) & ((gmail.__contains__(".student@gmail.com")) | ((gmail.__contains__(".admin@gmail.com"))))):
-        
+    if len(password)>6 and (gmail.__contains__(".student@gmail.com") or gmail.__contains__(".admin@gmail.com")):
         print("1. Signup\n2. Back")
+        print("-"*15)
         option=int(input("Enter your option:-"))
         if(option!=1):
-           print("Go to main page")
-           pass
+            print("Go to main page")
+            pass
         else:
             if(gmail.__contains__(".student@gmail.com")):
                 student_signup(gmail=gmail,password=password)  
             elif(gmail.__contains__(".admin@gmail.com")):
                 admin_signup(gmail=gmail,password=password) 
-            else:
-                print("Invalid input. Please enter a valid input.")
-                SignUp()    
+    else:
+        print("Invalid inputs. Please enter a valid input.")
+        print("~"*15)
+        SignUp()   
 
 
-             
+
 while True:
     print("="*45)
     heading_box("Children Library")
@@ -53,10 +54,8 @@ while True:
     
     if(option == 1): 
         login()
-        break
     elif(option == 2): 
         SignUp()
-        break
     elif(option == 3):
         print("Thank you for choosing us ❤️  spirit up by learning 🚀")
         break
