@@ -1,1 +1,0 @@
-{'sontu.admin@gmail.com': 'Sontu@123'}
