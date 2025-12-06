@@ -18,7 +18,6 @@ def login():
 
 
 
-
 def signup():
     print("Sign Up")
     gmail=input("Enter your gmail:-")
@@ -46,6 +45,5 @@ while True:
     elif(op==2):signup()
     elif(op==3):
         print("Thank you.Have a nice day.")
+        break
     else:print("Invalid input.Chose the correct one.")
-
-    break
