@@ -10,8 +10,8 @@ def login():
     loading()
 
     if gmail.endswith(".student@gmail.com") or gmail.endswith(".admin@gmail.com") and (len(password))>6:
-       print("`"*40)
-       print("hi")
+        print("`"*40)
+        print("hi")
     else: 
         print("Invalid input.Please enter the correct details.")
         login()
@@ -41,7 +41,7 @@ while True:
     print("2.Signup.")
     print("3.Exit.")
     op=int(input("Enter your option:-"))
-   
+    
     if (op==1):login()
     elif(op==2):signup()
     elif(op==3):
