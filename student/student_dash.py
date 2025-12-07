@@ -12,39 +12,25 @@ def dash():
     option = int(input("Enter option: "))
     return option
 
-def student_main(name,gmail,id):
+def student_main(gmail):
     while True:
         option = dash()
+
         if option == 3:
             break
         elif option ==1:
             bookllist() 
         elif option ==2:
-            profile(name,gmail,id)  
+            profile(gmail)  
         else:
             print("Invalid input.Please chose the correct option.")     
 
 
 
-def profile(name,gmail,password):
+def profile(name):
     print(f"Name:-{name}")
     print(f"Id:-{id} ")  
-    print("1.Request for book.")
-    print("2.Return for book.")   
-    print("3.Previous history.")        
     print("4.Back to main page.")
-
-    op=0
-    if op==1:
-        requestBook()
-    elif op==2:
-        returnBook()
-    elif op== 3:
-        history()
-    #elif op== 4:
-
-    else:
-        print("1223321")              
 
 
 def bookllist():
