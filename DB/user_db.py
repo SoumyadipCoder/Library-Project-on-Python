@@ -18,6 +18,9 @@ def write_db( data:dict, role:str = 'student'):
     with open (db_file, 'w') as db:
         db.write(str(data))
 
-# def find_db(email:str):
+#def find_db(email:str):
+        
+
+
 
 # def creat_entity():

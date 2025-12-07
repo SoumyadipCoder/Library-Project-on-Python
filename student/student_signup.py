@@ -6,7 +6,7 @@ def studentsignup(gmail,password):
     name=input("Enter your name:-")
     id=int(input("Enter your library id:-"))
     print("Your library account is successfully created.")
-    student_main()
+    student_main(name,gmail,id)
 
 
 
