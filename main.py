@@ -1,4 +1,4 @@
-from animations.heading import heading_box, heading_highlight
+from animations.heading import heading_box
 from animations.loading import pulse as loading
 from admin.admin_signup  import adminsignup as a_signup
 from student.student_signup  import studentsignup as s_signup
@@ -47,3 +47,4 @@ while True:
         print("Thank you.Have a nice day.")
         break
     else:print("Invalid input.Chose the correct one.")
+

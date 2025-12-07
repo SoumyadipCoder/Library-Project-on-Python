@@ -1,7 +1,7 @@
 from animations.loading import pulse as loading
-from student.student_dash import student_main
 
 def studentsignup(gmail,password):
+    from student.student_dash import student_main
     loading()
     name=input("Enter your name:-")
     id=int(input("Enter your library id:-"))
