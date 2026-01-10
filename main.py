@@ -2,6 +2,7 @@ from animations.heading import heading_box, heading_highlight
 from animations.loading import pulse as loading
 from admin.admin_signup  import adminsignup as a_signup
 from student.student_signup  import studentsignup as s_signup
+from student.student_dash import student_main
 
 def login():
     print("Login")
@@ -12,6 +13,8 @@ def login():
     if gmail.endswith(".student@gmail.com") or gmail.endswith(".admin@gmail.com") and (len(password))>6:
         print("`"*40)
         print("hi")
+        #print profile from DB
+        #student_main(name,gmail,id)
     else: 
         print("Invalid input.Please enter the correct details.")
         login()

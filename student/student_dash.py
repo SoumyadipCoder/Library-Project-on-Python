@@ -18,7 +18,7 @@ def student_main(name,gmail,id):
         if option == 3:
             break
         elif option ==1:
-            bookllist() 
+            booklist_histoy() 
         elif option ==2:
             profile(name,gmail,id)  
         else:
@@ -27,28 +27,59 @@ def student_main(name,gmail,id):
 
 
 def profile(name,gmail,password):
-    print(f"Name:-{name}")
-    print(f"Id:-{id} ")  
-    print("1.Request for book.")
-    print("2.Return for book.")   
-    print("3.Previous history.")        
-    print("4.Back to main page.")
+     
+    print("Profile.")
+    # print profile from DB
+    s_dash_board(gmail,id) 
 
-    op=0
-    if op==1:
-        requestBook()
-    elif op==2:
-        returnBook()
-    elif op== 3:
-        history()
-    #elif op== 4:
+   
 
-    else:
-        print("1223321")              
-
-
-def bookllist():
+def booklist():
     print("1. 'Physics' ->H.C.Bharma")
     print("2. 'Maths' ->R.D.Sharma")
     print("3. 'Biology' ->S.P.Mandal")
     print("4. 'Chemistry' ->PW Module") 
+    #print booklist DB
+
+
+    
+def booklist_histoy():
+    print("bookllist_histoy")
+    # print bookllist_histoy from DB
+
+def s_dash_board(gmail,id):
+    print("1.Book Request.")
+    print("2. Show Books.")
+    print("3. Renew Book.")
+    print("4. Return Book.")
+
+    op=int(input("Enter option:-"))
+    if (op==1): book_req(gmail,id)
+    elif (op==2): booklist()
+    elif (op==3):renew_book(gmail,id)
+    elif (op==4):return_book(gmail,id)
+    else :
+        print("Invalid input.Please choose the correct option.")
+        s_dash_board()
+
+def book_req(gmail,id):
+    b_name=input("Enter book name:-")
+    b_poet=input("Auther:-")
+    b_code=input("Enter book code:-")
+    #input data into profile DB
+    print("Your book is successfully registered.Keep learning.")
+
+def renew_book(gmail,id):
+    b_name=input("Enter book name:-")
+    b_poet=input("Auther:-")
+    b_code=input("Enter book code:-")
+    #input data into profile DB
+    print("Your book is successfully renewed.Keep learning.")
+
+def return_book(gmail,id):
+    b_name=input("Enter book name:-")
+    b_poet=input("Auther:-")
+    b_code=input("Enter book code:-")
+    #input data into profile DB
+    print("Your book is successfully returned.Have a good day.")   
+
