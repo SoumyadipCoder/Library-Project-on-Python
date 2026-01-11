@@ -24,3 +24,4 @@ def write_db( data:dict, role:str = 'student'):
 
 
 # def creat_entity():
+
