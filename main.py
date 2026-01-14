@@ -10,16 +10,18 @@ def login():
     password=input("Enter  password:-")
     loading()
 
-    if gmail.endswith(".student@gmail.com") or gmail.endswith(".admin@gmail.com") and (len(password))>6:
+    if gmail.endswith(".student@gmail.com") and (len(password))>6:
         print("`"*40)
-        print("hi")
+        print("student login")
         #print profile from DB
         #student_main(name,gmail,id)
+    elif gmail.endswith(".admin@gmail.com") and (len(password))>6: 
+           print("`"*40)
+           print("admin login")
+           #print profile from DB
     else: 
         print("Invalid input.Please enter the correct details.")
         login()
-
-
 
 def signup():
     print("Sign Up")
